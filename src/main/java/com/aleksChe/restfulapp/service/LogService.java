@@ -3,7 +3,6 @@ package com.aleksChe.restfulapp.service;
 import com.aleksChe.restfulapp.entity.Log;
 import com.aleksChe.restfulapp.repository.LogRepository;
 import lombok.AllArgsConstructor;
-import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -14,4 +13,8 @@ public class LogService {
     public void createLog(Log log){
         logRepository.save(log);
         }
+
+    public Log getLog(Long id){
+        return logRepository.getById(id);
+    }
 }
