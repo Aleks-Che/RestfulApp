@@ -35,10 +35,10 @@ class RestfulAppApplicationTests {
         this.mockMvc.perform(post("/log")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{\"message\":\"Test message\",\"type\":\"test type\",\"level\":\"low\"}"))
-                .andExpect(status()
+                        .andExpect(status()
                         .isOk());
         this.mockMvc.perform(get("/log/1"))
-                .andExpect(status().isOk())
-                .andExpect(content().string("{\"id\":1,\"message\":\"Test message\",\"type\":\"test type\",\"level\":\"low\",\"time\":null,\"hibernateLazyInitializer\"}"));
+                        .andExpect(status().isOk())
+                        .andExpect(content().string("{\"id\":1,\"message\":\"Test message\",\"type\":\"test type\",\"level\":\"low\",\"time\":null,\"hibernateLazyInitializer\"}"));
     }
 }

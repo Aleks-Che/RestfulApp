@@ -17,3 +17,8 @@
 
 Запускаем приложение
 `mvn spring-boot:run`
+
+Для запросов http port: 80
+
+Swagger документация по стандартной сссылке:
+http://localhost:80/swagger-ui/index.html
